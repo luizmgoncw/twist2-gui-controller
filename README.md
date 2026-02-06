@@ -38,12 +38,11 @@ The GUI organizes the 29 degrees of freedom into intuitive groups:
 
 ## Prerequisites
 
-This GUI is designed to work with the TWIST2 system. Before using, ensure you have:
-
 1. **[TWIST2](https://github.com/amazon-far/TWIST2)** installed and configured
 2. **Redis server** running (`redis-server`)
-3. **Python 3.8** with the `twist2` conda environment
-4. **TWIST2 low-level server** running (for real robot control)
+3. **Python 3.8** environment (conda or venv)
+4. **tkinter** - Python GUI library (`sudo apt install python3.8-tk` or `conda install tk`)
+5. **TWIST2 low-level server** running (for real robot control or simulation)
 
 See [docs/INSTALLATION.md](docs/INSTALLATION.md) for detailed setup instructions.
 
@@ -58,23 +57,31 @@ git clone https://github.com/luizmgoncw/twist2-gui-controller.git
 cd twist2-gui-controller
 ```
 
-### 2. Install to your TWIST2 directory
+### 2. Install dependencies
 
 ```bash
-# Automatic installation
-./install.sh /path/to/your/TWIST2
+# Activate your twist2 environment (choose one):
+conda activate twist2              # For conda users
+# OR
+source /path/to/venv3.8/bin/activate  # For venv users
 
-# Or manual copy
-cp src/gui_joint_controller.py /path/to/TWIST2/
-cp scripts/run_gui_controller.sh /path/to/TWIST2/
+# Install Python dependencies
+pip install -r requirements.txt
+
+# Install tkinter (if not already installed)
+sudo apt install python3.8-tk  # For Ubuntu/Debian
+# OR
+conda install tk  # For conda users
 ```
 
 ### 3. Run the GUI
 
 ```bash
-cd /path/to/TWIST2
-conda activate twist2
-bash run_gui_controller.sh
+# Make sure Redis is running
+redis-server --daemonize yes
+
+# Run the GUI
+bash scripts/run_gui_controller.sh
 ```
 
 ---
@@ -213,7 +220,7 @@ See [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md) for common issues and sol
 **Quick fixes:**
 
 - **Redis not connected:** Start Redis with `redis-server`
-- **GUI won't launch:** Ensure `twist2` conda environment is activated
+- **GUI won't launch:** Ensure `twist2` environment is activated (conda or venv)
 - **Robot not moving:** Check that TWIST2 low-level server is running
 
 ---

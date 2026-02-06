@@ -15,12 +15,20 @@ from pathlib import Path
 
 
 class JointControllerGUI:
-    def __init__(self, root, config_path="deploy_real/robot_control/configs/g1.yaml"):
+    def __init__(self, root, config_path=None):
         self.root = root
         self.root.title("TWIST2 G1 Joint Controller")
         self.root.geometry("1400x900")  # Wider to accommodate Scene Creator
 
-        # Load config
+        # Load config - use local config by default
+        if config_path is None:
+            # Try to find config relative to this script
+            script_dir = Path(__file__).parent
+            config_path = script_dir.parent / "config" / "g1.yaml"
+            if not config_path.exists():
+                # Fallback to current directory
+                config_path = Path("config/g1.yaml")
+
         with open(config_path, 'r') as f:
             self.config = yaml.safe_load(f)
 
@@ -120,7 +128,12 @@ class JointControllerGUI:
         self.scene_loop = False
         self.current_scene_step = 0
         self.pending_interp_time = 0.0  # Interp time for arriving at next pose
-        self.saved_scenes_file = Path("saved_scenes.yaml")
+
+        # Find saved files relative to this script
+        script_dir = Path(__file__).parent
+        self.saved_scenes_file = script_dir.parent / "examples" / "saved_scenes.yaml"
+        self.saved_poses_file = script_dir.parent / "examples" / "saved_poses.yaml"
+
         self.interp_callback = None  # Callback when interpolation completes
 
         # Build GUI
@@ -199,8 +212,6 @@ class JointControllerGUI:
         self.interp_time_entry = ttk.Entry(save_frame, width=8)
         self.interp_time_entry.grid(row=0, column=5, padx=5)
         self.interp_time_entry.insert(0, "2.0")
-
-        self.saved_poses_file = Path("saved_poses.yaml")
 
         # Interpolation state
         self.interpolating = False

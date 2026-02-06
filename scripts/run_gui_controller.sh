@@ -3,15 +3,16 @@
 # TWIST2 GUI Joint Controller
 # Manually control Unitree G1 joints via graphical sliders
 #
-# This script should be run from your TWIST2 installation directory
-# after copying gui_joint_controller.py there.
+# Run this script from the twist2-gui-controller directory
 
-# Use twist2 conda environment
-PYTHON_PATH=~/anaconda3/envs/twist2/bin/python
+# Use current Python environment (works with both conda and venv)
+# Make sure you have activated your twist2 environment before running this script
+PYTHON_PATH=python
 
-# Change to the directory where this script is located
+# Change to the repository root directory
 SCRIPT_DIR=$(dirname $(realpath $0))
-cd $SCRIPT_DIR
+REPO_ROOT=$(dirname $SCRIPT_DIR)
+cd $REPO_ROOT
 
 echo "=============================================="
 echo "  TWIST2 GUI Joint Controller"
@@ -29,8 +30,9 @@ echo "  - Use Scene Creator to animate sequences"
 echo ""
 echo "Prerequisites:"
 echo "  - Redis server running (redis-server)"
-echo "  - twist2 conda environment activated"
+echo "  - twist2 environment activated (conda or venv)"
+echo "  - tkinter installed (sudo apt install python3.8-tk)"
 echo "  - TWIST2 low-level server running for real robot"
 echo ""
 
-$PYTHON_PATH gui_joint_controller.py
+$PYTHON_PATH src/gui_joint_controller.py

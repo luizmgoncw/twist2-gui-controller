@@ -12,9 +12,14 @@ Common issues and solutions for the TWIST2 GUI Controller.
 
 **Solutions:**
 
-1. **Check conda environment:**
+1. **Check your environment is activated:**
    ```bash
+   # For conda:
    conda activate twist2
+
+   # For venv:
+   source /path/to/venv3.8/bin/activate
+
    python --version  # Should be 3.8.x
    ```
 
@@ -25,8 +30,10 @@ Common issues and solutions for the TWIST2 GUI Controller.
 
    If this fails:
    ```bash
-   sudo apt-get install python3-tk
-   # or
+   # For venv/system Python on Ubuntu:
+   sudo apt-get install python3.8-tk
+
+   # For conda:
    conda install tk
    ```
 
@@ -122,7 +129,11 @@ export LD_LIBRARY_PATH=$HOME/Documents/TWIST2/unitree_sdk2/thirdparty/lib/x86_64
 **Verification:**
 
 ```bash
-ldd ~/anaconda3/envs/twist2/lib/python3.8/site-packages/unitree_interface.so | grep libddsc
+# Find where unitree_interface.so is located:
+python -c "import unitree_interface; import os; print(os.path.dirname(unitree_interface.__file__))"
+
+# Then check its dependencies (replace <path> with output from above):
+ldd <path>/unitree_interface.so | grep libddsc
 # Should show: .../unitree_sdk2/thirdparty/lib/x86_64/libddsc.so
 ```
 

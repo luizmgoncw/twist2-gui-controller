@@ -14,66 +14,63 @@ You must have TWIST2 installed and working. Follow the official instructions:
 
 The GUI Controller is designed to work alongside TWIST2, not replace it. You need:
 - TWIST2 cloned and configured
-- The `twist2` conda environment set up
+- The `twist2` environment set up (conda or venv)
 - Redis server installed
 
 ### 2. System Requirements
 
 - **OS:** Ubuntu 20.04 / 22.04 (tested)
-- **Python:** 3.8 (via conda)
+- **Python:** 3.8 (via conda or venv)
 - **Hardware:** Any modern PC (simulation) or PC connected to Unitree G1 (real robot)
 
 ### 3. Dependencies
 
-The GUI uses standard Python libraries that should already be in your `twist2` environment:
+The GUI uses standard Python libraries. Most should already be in your `twist2` environment, but **tkinter must be installed separately**:
 
+**Required Python packages:**
 ```
-tkinter (usually pre-installed with Python)
+tkinter (MUST be installed via system package manager - see below)
 numpy
 redis
 pyyaml
 ```
 
----
+**Installing tkinter:**
 
-## Installation Methods
-
-### Method 1: Automatic Installation (Recommended)
-
+For **Ubuntu/Debian** with Python 3.8:
 ```bash
-# Clone this repository
-git clone https://github.com/luizmgoncw/twist2-gui-controller.git
-cd twist2-gui-controller
-
-# Run the install script
-./install.sh /path/to/your/TWIST2
-
-# Example:
-./install.sh ~/Documents/TWIST2/TWIST2
+sudo apt update
+sudo apt install python3.8-tk
 ```
 
-The script will:
-1. Verify TWIST2 exists at the specified path
-2. Copy `gui_joint_controller.py` to TWIST2 directory
-3. Copy `run_gui_controller.sh` launcher script
-4. Copy example poses and scenes to `examples/` subdirectory
+For **conda** environments:
+```bash
+conda activate twist2
+conda install tk
+```
 
-### Method 2: Manual Installation
+For **venv** environments:
+Install the system package for your Python version (e.g., `python3.8-tk`), then tkinter will be available in your venv.
+
+---
+
+## Installation
 
 ```bash
 # Clone this repository
 git clone https://github.com/luizmgoncw/twist2-gui-controller.git
 cd twist2-gui-controller
 
-# Copy the main script
-cp src/gui_joint_controller.py /path/to/TWIST2/
+# Activate your twist2 environment
+conda activate twist2  # OR: source /path/to/venv3.8/bin/activate
 
-# Copy the launcher
-cp scripts/run_gui_controller.sh /path/to/TWIST2/
+# Install Python dependencies
+pip install -r requirements.txt
 
-# Optionally copy examples
-mkdir -p /path/to/TWIST2/examples
-cp examples/*.yaml /path/to/TWIST2/examples/
+# Install tkinter if needed
+sudo apt install python3.8-tk  # Ubuntu/Debian
+# OR
+conda install tk  # conda users
 ```
 
 ---
@@ -94,14 +91,16 @@ Leave this running.
 For simulation:
 ```bash
 cd /path/to/TWIST2
-conda activate twist2
+# Activate your environment (choose one):
+conda activate twist2  # OR: source /path/to/venv3.8/bin/activate
 bash sim2sim.sh
 ```
 
 For real robot:
 ```bash
 cd /path/to/TWIST2
-conda activate twist2
+# Activate your environment (choose one):
+conda activate twist2  # OR: source /path/to/venv3.8/bin/activate
 bash sim2real.sh
 ```
 
@@ -109,9 +108,10 @@ bash sim2real.sh
 
 In a new terminal:
 ```bash
-cd /path/to/TWIST2
-conda activate twist2
-bash run_gui_controller.sh
+cd twist2-gui-controller
+# Activate your environment (choose one):
+conda activate twist2  # OR: source /path/to/venv3.8/bin/activate
+bash scripts/run_gui_controller.sh
 ```
 
 ---
@@ -154,57 +154,18 @@ If you see `[X] Redis Disconnected`, ensure Redis is running.
 
 ---
 
-## Updating
-
-To update to a newer version:
-
-```bash
-cd twist2-gui-controller
-git pull
-./install.sh /path/to/TWIST2
-```
-
----
-
-## Uninstalling
-
-Simply remove the installed files:
-
-```bash
-rm /path/to/TWIST2/gui_joint_controller.py
-rm /path/to/TWIST2/run_gui_controller.sh
-rm -rf /path/to/TWIST2/examples/  # If you want to remove examples
-```
-
----
-
 ## Troubleshooting Installation
-
-### "TWIST2 not found" Error
-
-Make sure you're pointing to the correct TWIST2 directory. The script looks for `gui.py` to verify the path:
-
-```bash
-# Check if this file exists:
-ls /path/to/TWIST2/gui.py
-```
-
-### "Permission denied" for install.sh
-
-```bash
-chmod +x install.sh
-./install.sh /path/to/TWIST2
-```
 
 ### tkinter Not Found
 
-Install tkinter for your system:
+Install tkinter for your environment:
 
 ```bash
-# Ubuntu/Debian
-sudo apt-get install python3-tk
+# For venv or system Python on Ubuntu/Debian:
+sudo apt-get install python3.8-tk
 
-# Or within conda environment
+# For conda environments:
+conda activate twist2
 conda install tk
 ```
 
