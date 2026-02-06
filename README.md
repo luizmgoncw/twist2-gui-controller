@@ -9,7 +9,7 @@
 
 ## Demo Video
 
-https://github.com/luizmgoncw/twist2-gui-controller/raw/main/media/twistjointgit.mp4
+<video src="media/twistjointgit.mp4" controls width="100%"></video>
 
 ---
 
