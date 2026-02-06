@@ -2,7 +2,7 @@
 
 > A graphical interface for manual joint control of the Unitree G1 humanoid robot, built as an extension to the [TWIST2](https://github.com/amazon-far/TWIST2) teleoperation system.
 
-[![Demo Video](https://img.shields.io/badge/Demo-Watch%20Video-red?style=for-the-badge&logo=youtube)](https://github.com/luizmgoncw/twist2-gui-controller/releases/download/v1.0.0/demo.mp4)
+[![Demo Video](https://img.shields.io/badge/Demo-Watch%20Video-red?style=for-the-badge&logo=youtube)](https://github.com/luizmgoncw/twist2-gui-controller/releases/download/v1.0.0/twistjointgit.mp4)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![TWIST2](https://img.shields.io/badge/Built%20on-TWIST2-blue?style=for-the-badge)](https://github.com/amazon-far/TWIST2)
 
@@ -10,7 +10,7 @@
 
 ## Demo Video
 
-https://github.com/luizmgoncw/twist2-gui-controller/releases/download/v1.0.0/demo.mp4
+https://github.com/luizmgoncw/twist2-gui-controller/releases/download/v1.0.0/twistjointgit.mp4
 
 *Click the badge above or check the [Releases](https://github.com/luizmgoncw/twist2-gui-controller/releases) page to watch the demo video.*
 
