@@ -7,9 +7,9 @@
 
 ---
 
-## Demo Video
+## Demo
 
-<video src="media/twistjointgit.mp4" controls width="100%"></video>
+![Demo](media/twistjointgit.gif)
 
 ---
 
