@@ -116,8 +116,8 @@ Thumbs.db
 /saved_poses.yaml
 /saved_scenes.yaml
 
-# Don't track large video files (use releases instead)
-*.mp4
+# Don't track large video files (except in media/ folder for README)
+# *.mp4
 *.avi
 *.mov
 *.mkv
