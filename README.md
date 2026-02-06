@@ -1,6 +1,8 @@
 # TWIST2 GUI Controller
 
 > A graphical interface for manual joint control of the Unitree G1 humanoid robot, built as an extension to the [TWIST2](https://github.com/amazon-far/TWIST2) teleoperation system.
+>
+> **This tool allows you to select target joint positions via sliders, which TWIST2's balance controller will follow while maintaining the robot's stability.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![TWIST2](https://img.shields.io/badge/Built%20on-TWIST2-blue?style=for-the-badge)](https://github.com/amazon-far/TWIST2)
@@ -74,15 +76,35 @@ sudo apt install python3.8-tk  # For Ubuntu/Debian
 conda install tk  # For conda users
 ```
 
-### 3. Run the GUI
+### 3. Start TWIST2 low-level server
+
+**Terminal 1** - Start TWIST2 (choose one):
+
+```bash
+cd /path/to/TWIST2
+source /path/to/venv3.8/bin/activate  # or: conda activate twist2
+
+# For simulation:
+bash sim2sim.sh
+
+# OR for real robot:
+bash sim2real.sh
+```
+
+### 4. Run the GUI
+
+**Terminal 2** - Launch the GUI controller:
 
 ```bash
 # Make sure Redis is running
 redis-server --daemonize yes
 
 # Run the GUI
+cd twist2-gui-controller
 bash scripts/run_gui_controller.sh
 ```
+
+The GUI will communicate with TWIST2 via Redis, sending target joint positions that TWIST2's controller will track while maintaining balance.
 
 ---
 
@@ -90,10 +112,9 @@ bash scripts/run_gui_controller.sh
 
 ### Basic Joint Control
 
-1. Launch the GUI with `bash run_gui_controller.sh`
-2. Use sliders to adjust individual joint angles
-3. Values are displayed in both radians and degrees
-4. Changes publish to Redis in real-time (if connected)
+1. Use sliders to adjust individual joint angles
+2. Values are displayed in both radians and degrees
+3. TWIST2 controller receives target positions and maintains robot balance
 
 ### Saving & Loading Poses
 
