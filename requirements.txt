@@ -1,0 +1,14 @@
+# TWIST2 GUI Controller Dependencies
+#
+# These packages are typically already installed in the twist2 conda environment.
+# This file is provided for reference and standalone installation.
+
+# Core dependencies
+numpy>=1.19.0
+redis>=4.0.0
+PyYAML>=5.4.0
+
+# tkinter is typically installed with Python
+# If not available, install via:
+#   Ubuntu/Debian: sudo apt-get install python3-tk
+#   Conda: conda install tk

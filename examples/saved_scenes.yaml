@@ -1,0 +1,212 @@
+my_scene:
+  steps:
+  - pose_name: semi_agachado
+    hold_time: 0.0
+    interp_time: 1.0
+  - pose_name: hold_smt
+    hold_time: 0.0
+    interp_time: 1.0
+  - pose_name: olhada_direita
+    hold_time: 0.0
+    interp_time: 1.0
+  - pose_name: olhada_esquerda
+    hold_time: 0.0
+    interp_time: 1.0
+  - pose_name: turn_left
+    hold_time: 0.0
+    interp_time: 1.0
+  timestamp: '2026-01-22 10:43:52'
+  loop: true
+oferecendo_pastel:
+  steps:
+  - pose_name: tchau_direita
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: tchau_esquerda
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: tchau_direita_2
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: tchau_esquerda_2
+    hold_time: 0.0
+    interp_time: 0.5
+  timestamp: '2026-02-04 09:59:30'
+  loop: true
+ate_sem_paladar:
+  steps:
+  - pose_name: tchau_direita
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: tchau_esquerda
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: tchau_direita_2
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: tchau_esquerda_2
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: tchau_direita
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: tchau_esquerda
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: tchau_direita_2
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: tchau_esquerda_2
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: em_pe
+    hold_time: 1.0
+    interp_time: 0.5
+  - pose_name: nao_posso_direita
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: nao_posso_esquerda
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: nao_posso_direita
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: nao_posso_esquerda
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: sem_paladar
+    hold_time: 0.0
+    interp_time: 1.0
+  timestamp: '2026-02-04 11:06:40'
+  loop: false
+ate_mostrar:
+  steps:
+  - pose_name: tchau_direita
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: tchau_esquerda
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: tchau_direita_2
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: tchau_esquerda_2
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: tchau_direita
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: tchau_esquerda
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: tchau_direita_2
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: tchau_esquerda_2
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: em_pe
+    hold_time: 1.0
+    interp_time: 0.5
+  - pose_name: nao_posso_direita
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: nao_posso_esquerda
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: nao_posso_direita
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: nao_posso_esquerda
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: sem_paladar
+    hold_time: 1.0
+    interp_time: 1.0
+  - pose_name: vira_esquerda
+    hold_time: 2.0
+    interp_time: 0.5
+  - pose_name: maos_juntas
+    hold_time: 2.0
+    interp_time: 0.5
+  - pose_name: mostrar
+    hold_time: 3.0
+    interp_time: 0.5
+  timestamp: '2026-02-04 11:19:15'
+  loop: true
+first_full_demo:
+  steps:
+  - pose_name: tchau_direita
+    hold_time: 0.0
+    interp_time: 0.7
+  - pose_name: tchau_esquerda
+    hold_time: 0.0
+    interp_time: 0.7
+  - pose_name: tchau_direita_2
+    hold_time: 0.0
+    interp_time: 0.7
+  - pose_name: tchau_esquerda_2
+    hold_time: 0.0
+    interp_time: 0.7
+  - pose_name: tchau_direita
+    hold_time: 0.0
+    interp_time: 0.7
+  - pose_name: tchau_esquerda
+    hold_time: 0.0
+    interp_time: 0.7
+  - pose_name: tchau_direita_2
+    hold_time: 0.0
+    interp_time: 0.7
+  - pose_name: tchau_esquerda_2
+    hold_time: 0.0
+    interp_time: 0.7
+  - pose_name: em_pe
+    hold_time: 1.5
+    interp_time: 0.5
+  - pose_name: nao_posso_direita
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: nao_posso_esquerda
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: nao_posso_direita
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: nao_posso_esquerda
+    hold_time: 1.2
+    interp_time: 0.5
+  - pose_name: sem_paladar
+    hold_time: 2.0
+    interp_time: 1.0
+  - pose_name: vira_esquerda
+    hold_time: 2.0
+    interp_time: 0.5
+  - pose_name: maos_juntas
+    hold_time: 3.5
+    interp_time: 0.5
+  - pose_name: mostrar
+    hold_time: 3.0
+    interp_time: 0.5
+  - pose_name: nao_posso_direita
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: nao_posso_esquerda
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: nao_posso_direita
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: nao_posso_esquerda
+    hold_time: 1.0
+    interp_time: 0.5
+  - pose_name: before_its_fact
+    hold_time: 0.0
+    interp_time: 0.5
+  - pose_name: its_fact
+    hold_time: 2.0
+    interp_time: 0.5
+  - pose_name: mostrar
+    hold_time: 0.0
+    interp_time: 0.5
+  timestamp: '2026-02-04 11:36:18'
+  loop: false
