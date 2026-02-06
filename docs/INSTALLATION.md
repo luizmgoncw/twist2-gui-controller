@@ -42,7 +42,7 @@ pyyaml
 
 ```bash
 # Clone this repository
-git clone https://github.com/YOUR_USERNAME/twist2-gui-controller.git
+git clone https://github.com/luizmgoncw/twist2-gui-controller.git
 cd twist2-gui-controller
 
 # Run the install script
@@ -62,7 +62,7 @@ The script will:
 
 ```bash
 # Clone this repository
-git clone https://github.com/YOUR_USERNAME/twist2-gui-controller.git
+git clone https://github.com/luizmgoncw/twist2-gui-controller.git
 cd twist2-gui-controller
 
 # Copy the main script

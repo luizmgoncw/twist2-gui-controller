@@ -2,7 +2,7 @@
 
 > A graphical interface for manual joint control of the Unitree G1 humanoid robot, built as an extension to the [TWIST2](https://github.com/amazon-far/TWIST2) teleoperation system.
 
-[![Demo Video](https://img.shields.io/badge/Demo-Watch%20Video-red?style=for-the-badge&logo=youtube)](https://github.com/YOUR_USERNAME/twist2-gui-controller/releases/download/v1.0.0/demo.mp4)
+[![Demo Video](https://img.shields.io/badge/Demo-Watch%20Video-red?style=for-the-badge&logo=youtube)](https://github.com/luizmgoncw/twist2-gui-controller/releases/download/v1.0.0/demo.mp4)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![TWIST2](https://img.shields.io/badge/Built%20on-TWIST2-blue?style=for-the-badge)](https://github.com/amazon-far/TWIST2)
 
@@ -10,9 +10,9 @@
 
 ## Demo Video
 
-https://github.com/YOUR_USERNAME/twist2-gui-controller/releases/download/v1.0.0/demo.mp4
+https://github.com/luizmgoncw/twist2-gui-controller/releases/download/v1.0.0/demo.mp4
 
-*Click the badge above or check the [Releases](https://github.com/YOUR_USERNAME/twist2-gui-controller/releases) page to watch the demo video.*
+*Click the badge above or check the [Releases](https://github.com/luizmgoncw/twist2-gui-controller/releases) page to watch the demo video.*
 
 ---
 
@@ -57,7 +57,7 @@ See [docs/INSTALLATION.md](docs/INSTALLATION.md) for detailed setup instructions
 ### 1. Clone this repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/twist2-gui-controller.git
+git clone https://github.com/luizmgoncw/twist2-gui-controller.git
 cd twist2-gui-controller
 ```
 
@@ -176,7 +176,7 @@ If you use this tool in your research, please cite both projects:
   title={TWIST2 GUI Controller: A Graphical Interface for Humanoid Joint Control},
   author={Marques, Luiz},
   year={2026},
-  url={https://github.com/YOUR_USERNAME/twist2-gui-controller}
+  url={https://github.com/luizmgoncw/twist2-gui-controller}
 }
 
 @article{ze2025twist2,

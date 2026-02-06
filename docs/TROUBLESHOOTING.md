@@ -110,7 +110,7 @@ Common issues and solutions for the TWIST2 GUI Controller.
 Add to your shell script (before running Python):
 
 ```bash
-export LD_LIBRARY_PATH=/home/YOUR_USERNAME/Documents/TWIST2/unitree_sdk2/thirdparty/lib/x86_64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=$HOME/Documents/TWIST2/unitree_sdk2/thirdparty/lib/x86_64:$LD_LIBRARY_PATH
 ```
 
 **Why it works:**
@@ -221,7 +221,7 @@ ldd ~/anaconda3/envs/twist2/lib/python3.8/site-packages/unitree_interface.so | g
 If your issue isn't listed here:
 
 1. **Check TWIST2 issues:** https://github.com/amazon-far/TWIST2/issues
-2. **Open an issue:** https://github.com/YOUR_USERNAME/twist2-gui-controller/issues
+2. **Open an issue:** https://github.com/luizmgoncw/twist2-gui-controller/issues
 
 When reporting issues, include:
 - Operating system version
